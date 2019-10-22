@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ColoresXamarin"
+             x:Class="ColoresXamarin.MainPage">
+
+    <StackLayout>
+        <!-- Place new controls here -->
+        <Label x:Name="lbl_Titulo"  FontSize="Large"  Text="Mezcla Colores" 
+           HorizontalOptions="Center"
+           VerticalOptions="Start" />
+        <Label Text="Seleccione Color:" />
+        <Picker x:Name="PickerColor" SelectedIndex="{Binding Industry}" HorizontalOptions="FillAndExpand">
+            <Picker.Items>
+                <x:String>Azul</x:String>
+                <x:String>Rojo</x:String>
+                <x:String>Amarillo</x:String>
+                <x:String>Verde</x:String>
+                <x:String>Naranja</x:String>
+                <x:String>Magenta</x:String>
+                <x:String>Cian</x:String>
+                <x:String>Negro</x:String>
+                <x:String>Blanco</x:String>
+            </Picker.Items>
+        </Picker>
+        <Button x:Name="btn_Calcula" Text="Acciona" Clicked="Btn_Calcula_Clicked"/>
+        <Label Text="Resultado:" HorizontalOptions="Center" />
+        <Grid >
+            
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions >
+            <Button x:Name="btn_C1" Text=""  Grid.Column="0"/>
+            <Button x:Name="btn_C2" Text=""  Grid.Column="1"/>
+            <Button x:Name="btn_C3" Text=""  Grid.Column="2"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
