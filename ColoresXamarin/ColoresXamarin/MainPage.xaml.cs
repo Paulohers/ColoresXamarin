@@ -14,10 +14,18 @@ namespace ColoresXamarin
             InitializeComponent();
         }
 
+        /// <summary> Metodo propio del boton "Btn_Calcula_Clicked"
+        /// <para>Ejecuta el metodo que tiene dentro "ColoresCambio"
+        /// </para>
+        /// </summary>
         private void Btn_Calcula_Clicked(object sender, EventArgs e)
         {
             ColoresCambio();
         }
+        /// <summary> Metodo el cual espera el cambio de valor de el componente "Picker"
+        /// <para>Cambia el color de los botones de resultado, dependiendo 
+        /// si se cambia el valor de picker (Combobox), para mirar los colores necesario para llegar a ese color</para>
+        /// </summary>
         public void ColoresCambio()
         {
             string color = PickerColor.SelectedItem.ToString();
